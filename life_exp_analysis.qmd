@@ -4,14 +4,21 @@ format: html
 editor: visual
 ---
 
-``` r
-library(tidyverse)
-```
-
-```         
 # Abstract
 
 Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
-# Analysis
+# Life Expectancy Analysis
+
+```{r}
+library(tidyverse)
+
+gapminder::gapminder_unfiltered
+
+sumdat <- gapminder::gapminder_unfiltered%>%
+  group_by(year)%>%
+  filter(lifeExp == max(lifeExp, na.rm = TRUE))%>%
+  ungroup()%>%
+  select(year, country, lifeExp)
+
 ```
