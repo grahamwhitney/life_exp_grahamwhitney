@@ -10,6 +10,8 @@ Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
 # Life Expectancy Analysis
 
+Here is the code to organize data for analysis
+
 ```{r}
 library(tidyverse)
 
